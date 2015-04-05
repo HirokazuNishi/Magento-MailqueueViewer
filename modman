@@ -1,3 +1,4 @@
-src/app/etc/modules/Rack_Emailqueueviewer.xml app/etc/modules/Rack_Emailqueueviewer.xml
-src/app/code/community/Rack/Emailqueueviewer app/code/community/Rack/Emailqueueviewer
-src/app/locale/ja_JP/Rack_Emailqueueviewer.csv app/locale/ja_JP/Rack_Emailqueueviewer.csv
+src/app/etc/modules/Rack_Mailqueueviewer.xml app/etc/modules/Rack_Mailqueueviewer.xml
+src/app/code/community/Rack/Mailqueueviewer app/code/community/Rack/Mailqueueviewer
+src/app/locale/ja_JP/Rack_Mailqueueviewer.csv app/locale/ja_JP/Rack_Mailqueueviewer.csv
+

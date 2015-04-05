@@ -15,18 +15,15 @@
  * @copyright  Copyright (c) 2015 Veriteworks Inc. (http://principle-works.jp/)
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
-class Rack_Mailqueueviewer_Adminhtml_Mailqueueviewer_IndexController extends Mage_Adminhtml_Controller_Action
+class Rack_Mailqueueviewer_Block_Adminhtml_Mailqueueviewer extends Mage_Adminhtml_Block_Widget_Grid_Container
 {
-    public function indexAction()
+    public function __construct()
     {
-        $this->loadLayout();
+        $this->_controller = 'adminhtml_mailqueueviewer';
+        $this->_blockGroup = 'mailqueueviewer';
+        $this->_headerText = Mage::helper('mailqueueviewer')->__('Mail queue viewer');
+        //$this->_addButtonLabel = Mage::helper('mailqueueviewer')->__('Add New List');
+        parent::__construct();
 
-        $this->_title($this->__('Email Queue'));
-        $this->_setActiveMenu('system');
-
-        $block = $this->getLayout()->createBlock('mailqueueviewer/adminhtml_mailqueueviewer');
-        $this->_addContent($block);
-
-        $this->renderLayout();
     }
 }
