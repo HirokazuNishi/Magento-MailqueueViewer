@@ -1,0 +1,16 @@
+{
+    "name":"rack/mailqueueviewer",
+    "type":"magento-module",
+    "license":"OSL-3.0",
+    "homepage":"https://github.com/HirokazuNishi/Magento-mailqueueviewer",
+    "description":"Magento Email queue viewer after CE 1.9.1 / EE 1.14.1",
+    "authors":[
+        {
+            "name":"Hirokazu Nishi",
+            "email":"nishi@principle-works.jp"
+        }
+    ],
+    "require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
