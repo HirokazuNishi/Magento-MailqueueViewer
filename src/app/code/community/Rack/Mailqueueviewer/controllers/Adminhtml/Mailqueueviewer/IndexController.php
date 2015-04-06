@@ -29,4 +29,22 @@ class Rack_Mailqueueviewer_Adminhtml_Mailqueueviewer_IndexController extends Mag
 
         $this->renderLayout();
     }
+
+    public function massDeleteAction()
+    {
+        $messageIds = $this->getRequest()->getParam('message_ids', null);
+        if (is_array($messageIds)) {
+            $model = Mage::getModel('core/email_queue');
+            try {
+                foreach ($messageIds as $id) {
+                    $model->load($id);
+                    $model->delete();
+                }
+                Mage::getSingleton('adminhtml/session')->addSuccess(Mage::helper('mailqueueviewer')->__('Queue was successfully deleted.'));
+            } catch (Exception $e) {
+                Mage::getSingleton('adminhtml/session')->addError($e->getMessage());
+            }
+        }
+        $this->_redirect('*/*/');
+    }
 }

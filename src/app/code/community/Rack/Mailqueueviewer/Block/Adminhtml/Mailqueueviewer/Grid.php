@@ -45,21 +45,21 @@ class Rack_Mailqueueviewer_Block_Adminhtml_Mailqueueviewer_Grid extends Mage_Adm
         ));
 
         $this->addColumn('entity_id', array(
-            'header'    => Mage::helper('mailqueueviewer')->__('Name'),
+            'header'    => Mage::helper('mailqueueviewer')->__('Entity ID'),
             'align'     =>'left',
             'width'     => '50px',
             'index'     => 'entity_id',
         ));
 
         $this->addColumn('entity_type', array(
-            'header'    => Mage::helper('mailqueueviewer')->__('Description'),
+            'header'    => Mage::helper('mailqueueviewer')->__('Entity Type'),
             'align'     =>'left',
             'width'     => '50px',
             'index'     => 'entity_type',
         ));
 
         $this->addColumn('message_body', array(
-            'header'    => Mage::helper('mailqueueviewer')->__('Description'),
+            'header'    => Mage::helper('mailqueueviewer')->__('Message Body'),
             'align'     =>'left',
             'type'      => 'text',
             'width'     => '300px',
@@ -67,7 +67,7 @@ class Rack_Mailqueueviewer_Block_Adminhtml_Mailqueueviewer_Grid extends Mage_Adm
             'renderer' => 'Rack_Mailqueueviewer_Block_Adminhtml_Widget_Grid_Column_Renderer_Body',
         ));
         $this->addColumn('message_parameters', array(
-            'header'    => Mage::helper('mailqueueviewer')->__('Description'),
+            'header'    => Mage::helper('mailqueueviewer')->__('Message Parameters'),
             'align'     =>'left',
             'width'     => '150px',
             'index'     => 'message_parameters',

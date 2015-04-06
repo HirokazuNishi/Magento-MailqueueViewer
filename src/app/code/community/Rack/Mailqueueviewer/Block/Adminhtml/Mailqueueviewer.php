@@ -19,11 +19,11 @@ class Rack_Mailqueueviewer_Block_Adminhtml_Mailqueueviewer extends Mage_Adminhtm
 {
     public function __construct()
     {
+        parent::__construct();
         $this->_controller = 'adminhtml_mailqueueviewer';
         $this->_blockGroup = 'mailqueueviewer';
         $this->_headerText = Mage::helper('mailqueueviewer')->__('Mail queue viewer');
         //$this->_addButtonLabel = Mage::helper('mailqueueviewer')->__('Add New List');
-        parent::__construct();
-
+        $this->removeButton('add');
     }
 }
